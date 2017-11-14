@@ -1,0 +1,20 @@
+page-notifications {
+  .nav-bg-color{
+    background-color: header !important;
+  }
+  .content-background {
+    background-image: url('../assets/icons_app/background_app.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+    .ion-menu-list-frame{
+      width: 100%;
+      left: 0px;
+      position: absolute;
+      background: transparent !important;
+    }
+    .item[no-lines].bottom-border {
+      border-bottom: 1px solid lightgrey;
+      background: transparent !important;
+    }
+}

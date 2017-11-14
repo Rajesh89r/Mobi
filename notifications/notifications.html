@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="header">
+    <ion-title style="text-align: center;">
+      MOBI
+    </ion-title>
+    <ion-buttons end>
+      <!-- <button class="button button-clear button-positive" style="background: transparent !important;width:40px;">
+      </button> -->
+      <button class="button button-clear button-positive" style="background: transparent !important;" (click)="deleteAllNotification()">
+        <img style="width:25px;height:25px;" src="assets/icons_app/delete_icon.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="content-background" padding>
+
+  <h5 style="text-align: left">Notifications</h5>
+  <br *ngIf="isNoItems">
+  <p style="position:absolute;width:90%;height:40px;left:5%;text-align: center;" *ngIf="isNoItems">No notifications found</p>
+  <ion-list class="ion-menu-list-frame" *ngIf="!isNoItems">
+    <ion-item-sliding *ngFor="let item of result">
+    <ion-item no-lines class="bottom-border"  (click)="itemSelected(item)">
+      <p style="position:absolute;height:20px; left:5%; width:90%;text-align: left;color:grey;font-family:Montserrat_Light; " [innerHTML]="item.message">
+      </p>
+      <br>
+      <p style="position:absolute;height:20px; left:5%; width:90%;text-align: right;color:grey;font-family:Montserrat_Light; " [innerHTML]="item.datetime">
+      </p>
+      <br>
+    </ion-item>
+    <ion-item-options (ionSwipe)="deleteNotification(item)">
+      <button ion-button color="danger" (click)="deleteNotification(item)">Delete</button>
+    </ion-item-options>
+  </ion-item-sliding>
+  </ion-list>
+</ion-content>

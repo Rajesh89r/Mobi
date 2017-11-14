@@ -1,0 +1,25 @@
+page-appointment {
+  .nav-bg-color{
+    background-color: header !important;
+  }
+  .content-background {
+    background-image: url('../assets/icons_app/background_app.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+  .ion-button-next{
+    border-radius: 0px;
+    height:40px;
+    width:100%;
+    position: absolute;
+    left: 0px
+  }
+  .footerColor {
+background-color: #bf1e2e;
+text-align: center;
+justify-content: center;
+align-items: center;
+color: white;
+height:45px;
+}
+}

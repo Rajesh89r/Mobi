@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="header">
+    <ion-title style="text-align: center;">
+      MOBI
+    </ion-title>
+    <ion-buttons end>
+        <button class="button button-clear button-positive" style="background: transparent !important;width:40px;">
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="content-background" padding>
+
+  <h5 style="text-align: left;"> Select the date & time of your appointment </h5><br>
+
+  <div style="position: absolute;width: 40%;height:40px">
+    <p style="text-align: left;vertical-align: middle important; position: absolute; margin-top:0;font-family:Montserrat_Light;">Selected Date:</p>
+  </div>
+  <div style="position: absolute;left:40%;width: 60%;height:40px" (click)="pickDate()">
+    <p style="text-align: left;vertical-align: middle important;width:75%; margin-top:0;font-family:Montserrat_Light;" [innerHTML]="dateString"></p>
+    <img *ngIf="!isTimePickerVisible" style="position: absolute;  left: 80%; width: 10%;top:15%" src="assets/icons_app/expand_icon.png">
+    <img *ngIf="isTimePickerVisible" style="position: absolute; left: 80%; width: 10%; margin-top:0;top:15%" src="assets/icons_app/collapse_icon.png">
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <div style="position: absolute;width: 40%;height:40px">
+    <p style="text-align: left;vertical-align: middle important; position: absolute; margin-top:0;font-family:Montserrat_Light;">Selected Time:</p>
+  </div>
+  <div style="position: absolute;left:40%;width: 60%;height:40px" (click)="pickTime()">
+    <p style="text-align: left;vertical-align: middle important;width:75%; margin-top:0;font-family:Montserrat_Light;" [innerHTML]="timeString"></p>
+    <img *ngIf="!isTimePickerVisible" style="position: absolute;  left: 80%; width: 10%; margin-top:0;top:15%" src="assets/icons_app/expand_icon.png">
+    <img *ngIf="isTimePickerVisible" style="position: absolute; left: 80%; width: 10%; margin-top:0;top:15%" src="assets/icons_app/collapse_icon.png">
+  </div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+</ion-content>
+
+<ion-footer class="footerColor">
+  <button class="ion-button-next" color="header" ion-button block (click)="nextAction()">
+    NEXT
+  </button>
+</ion-footer>
